@@ -2,7 +2,7 @@
   "packages": [
     "themes/*",
     "mu-plugins/10up-plugin",
-    "plugins/hello-world-block"
+    "plugins/book-block"
   ],
   "version": "independent"
 }
