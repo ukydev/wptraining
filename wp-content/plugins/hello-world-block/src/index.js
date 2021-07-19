@@ -12,63 +12,58 @@ registerBlockType(
 			categories: {
 				type: 'object'
 			},
-			selectedCategory: {
+			selectedBook: {
 				type: 'string'
 			},
 			postsPerPage: {
 				type: 'string'
+			},
+			books: {
+				type:'object'
 			}
 		},
 		edit: function ( props ) {
-
-			if(!props.attributes.categories) {
+			if(!props.attributes.books) {
 				wp.apiFetch({
-					url:'/wp-json/wp/v2/categories'
-				}).then( categories => {
+					url:'/wp-json/library/book'
+				}).then( books => {
 					props.setAttributes({
-						categories: categories
+						books: books
 					})
 				});
 			}
 
-			if(!props.attributes.categories) {
+			if(!props.attributes.books) {
 				return 'Loading...';
 			}
 
-			if(props.attributes.categories && props.attributes.categories.length === 0) {
-				return 'No categories found';
+			if(props.attributes.books && props.attributes.books.length === 0) {
+				return 'No books found';
 			}
 
 			console.log(props.attributes)
 
-			function updateCategory(e) {
+			function updateBooks(e) {
 				props.setAttributes({
-					selectedCategory: e.target.value
+					selectedBook: e.target.value
 				});
 			}
 
-			function updatePostsPerPage(e) {
-				props.setAttributes({
-					postPerPage: e.target.value
-				});
-			}
-
+			console.log(props.attributes.selectedBook);
 			return (
 				<div>
-					<label>Category</label>
-					<select onChange={updateCategory} value={props.attributes.selectedCategory}>
+					<label>Books</label>
+					<select onChange={updateBooks} value={props.attributes.selectedBook}>
 						{
-							props.attributes.categories.map( category => {
+							props.attributes.books.map( books => {
 								return (
-									<option value={ category.id } key={ category.id } >
-										{ category.name }
+									<option value={ books.id } key={ books.id } >
+										{ books.post_title }
 									</option>
 								);
 							})
 						}
 					</select>
-                    <label>Posts Per Page</label>
-					<input type ="text" onBlur={updatePostsPerPage} value={props.attributes.postsPerPage}/>
 				</div>
 			);
 		},
