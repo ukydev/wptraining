@@ -1,0 +1,34 @@
+{
+  "name": "tenup-wp-scaffold",
+  "version": "1.0.0",
+  "description": "Project Description",
+  "homepage": "https://project-domain.tld",
+  "repository": {
+    "type": "git",
+    "url": "https://project-git-repo.tld"
+  },
+  "scripts": {
+    "prepare": "lerna bootstrap --hoist && husky install",
+    "build": "lerna run build --stream",
+    "start": "lerna run start --parallel",
+    "watch": "lerna run watch --parallel",
+    "test": "lerna run test --stream",
+    "clean": "lerna clean",
+    "clean-dist": "lerna run clean-dist --stream"
+  },
+  "author": {
+    "name": "10up",
+    "email": "info@10up.com",
+    "url": "https://10up.com",
+    "role": "developer"
+  },
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "devDependencies": {
+    "10up-toolkit": "^1.0.9",
+    "husky": "^6.0.0",
+    "lerna": "^4.0.0",
+    "lint-staged": "^10.5.4"
+  }
+}

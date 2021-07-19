@@ -1,0 +1,10 @@
+site_name: WP Acceptance
+site_url:  http://wpacceptance.readthedocs.org/
+site_description: Test code using acceptance tests and sharable, defined file and database snapshots.
+repo_url: https://github.com/10up/wpacceptance
+
+nav:
+- Home: index.md
+- Cookbook: cookbook.md
+
+theme: mkdocs

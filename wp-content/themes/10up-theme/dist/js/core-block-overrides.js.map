@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://tenup-theme/./includes/core-block-overrides.js"],"names":[],"mappings":";;;;;AAAA;AACA;AACA;AAEA;AACA;AACA,+B","file":"js/core-block-overrides.js","sourcesContent":["/**\n * Entry point for all core block overrides\n */\n\n// import './block-filters';\n// import './block-styles';\n// import './block-variations';\n"],"sourceRoot":""}

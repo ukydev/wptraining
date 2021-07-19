@@ -1,0 +1,8 @@
+{
+  "packages": [
+    "themes/*",
+    "mu-plugins/10up-plugin",
+    "plugins/hello-world-block"
+  ],
+  "version": "independent"
+}

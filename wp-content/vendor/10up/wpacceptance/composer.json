@@ -1,0 +1,54 @@
+{
+  "name": "10up/wpacceptance",
+  "description": "Test code using acceptance tests and sharable, defined file and database snapshots.",
+  "keywords": ["wordpress", "testing", "acceptance tests"],
+  "minimum-stability": "dev",
+  "license": ["MIT"],
+  "authors": [
+    {
+      "name": "Taylor Lovett",
+      "email": "taylor.lovett@10up.com"
+    }
+  ],
+  "bin": [
+    "bin/wpacceptance"
+  ],
+  "autoload": {
+    "files": [
+      "src/utils.php"
+    ],
+    "psr-4": {
+      "WPAcceptance\\": "./src/classes"
+    }
+  },
+  "repositories": [
+    {
+      "type": "git",
+      "url": "https://github.com/10up/wpsnapshots.git"
+    }
+  ],
+  "scripts": {
+    "lint": [
+      "phpcs --runtime-set testVersion 7.2- ."
+    ],
+    "lint-fix": [
+      "phpcbf --runtime-set testVersion 7.2- ."
+    ],
+    "post-install-cmd": [
+      "npm install"
+    ]
+  },
+  "require-dev": {
+    "10up/phpcs-composer": "dev-master"
+  },
+  "require": {
+    "docker-php/docker-php": "^2.0@dev",
+    "10up/wpsnapshots": "dev-master",
+    "symfony/console": "^4.1",
+    "phpunit/phpunit": "^7.5",
+    "php": ">=7.2",
+    "nesk/puphpeteer": "^1.4",
+    "10up/wpinstructions": "dev-master",
+    "jane-php/open-api-runtime": "4.2.0"
+  }
+}

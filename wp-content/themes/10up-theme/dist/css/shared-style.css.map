@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://tenup-theme/./assets/css/shared/shared-style.css"],"names":[],"mappings":"AAAA;;;;;EAKE","file":"css/shared-style.css","sourcesContent":["/**\n * TenUpTheme: Shared Styles.\n * These styles are shared between the front end and admin\n * https://project-website.tld\n *\n */\n"],"sourceRoot":""}

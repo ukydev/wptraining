@@ -1,0 +1,45 @@
+/**
+ * TenUpPlugin
+ * https://project-website.tld
+ *
+ */
+
+/* Global - global pieces like media queries, mixins and placholders */
+
+/*
+ * Colors
+ */
+
+:root {
+	--c-black: #000;
+	--c-white: #fff;
+}
+
+/*
+ * Media Queries
+ */
+
+/* 400px */
+
+/* 480px */
+
+/* 768px */
+
+/* 1024px */
+
+/* 1280px */
+
+/* 1440px */
+
+/* WP Core Breakpoints (used for the admin bar for example) */
+
+/* Base - base styles such as fonts, typography, and wordpress overrides */
+
+/* @import url("base/index.css"); */
+
+/* Components */
+
+/* @import url("components/index.css"); */
+
+
+/*# sourceMappingURL=style.css.map*/

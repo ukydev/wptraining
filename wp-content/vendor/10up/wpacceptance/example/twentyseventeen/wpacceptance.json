@@ -1,0 +1,7 @@
+{
+    "name": "twentyseventeen-example",
+    "tests": [
+        "tests\/*.php"
+    ],
+    "snapshot_id": "69dd8b6ffdf7b7239e29b5d5711466b6"
+}
